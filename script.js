@@ -23,21 +23,24 @@ const areas = [
 const pricingPlans = [
   {
     name: 'Starter',
-    price: 1500,
+    price: 699,
+    span: '₹699 / reel',
     description: 'Perfect for new local businesses',
     features: ['Business profile', 'Search visibility', 'Category listing', 'Customer reviews'],
     popular: false
   },
   {
     name: 'Growth',
-    price: 1500,
+    price: 2499,
+    span: '₹2,499 / month',
     description: 'Most popular local business package',
     features: ['Everything in Starter', 'Featured placement', 'Reel showcase', 'Analytics access'],
     popular: true
   },
   {
     name: 'Premium',
-    price: 1500,
+    price: 6999,
+    span: '₹6,999 / month',
     description: 'Maximum local visibility and reach',
     features: ['Priority placement', 'Home page exposure', 'Advanced insights', 'Priority support'],
     popular: false
