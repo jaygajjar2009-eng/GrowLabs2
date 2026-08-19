@@ -71,7 +71,7 @@ const businesses = [
   },
   {
     id: 2,
-    name: 'Saffron Bistro',
+    name: 'Tea Post',
     category: 'Restaurants',
     area: 'Ghogha Circle',
     rating: 4.9,
@@ -193,9 +193,9 @@ const businesses = [
 
 const reels = [
   {
-    title: 'Fresh bites at Saffron Bistro',
+    title: 'Fresh bites at Tea Post',
     caption: 'Experience signature flavors and evening ambience in the heart of the city.',
-    business: 'Saffron Bistro',
+    business: 'Tea Post',
     category: 'Restaurants',
     views: '21.4K',
     date: '2 days ago',
