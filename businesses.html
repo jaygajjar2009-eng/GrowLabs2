@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Businesses | BharatConnect</title>
+    <meta name="description" content="Explore businesses across India with filters, categories and ratings." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <div class="brand-wrap">
+          <div class="brand-mark">B</div>
+          <div class="brand-text">
+            <span class="brand-name">BharatConnect</span>
+            <span class="brand-tag">Business discovery</span>
+          </div>
+        </div>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="businesses.html" class="active">Businesses</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="business-profile.html">Profile</a>
+          <a href="list-your-business.html">List Your Business</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="primary-btn small">List Your Business</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <span class="eyebrow">Discover</span>
+          <h1>Find the right business in your city</h1>
+          <p>Search by category, area, rating and reel presence to discover trusted local business listings.</p>
+        </div>
+      </section>
+
+      <section class="section-spacing">
+        <div class="container">
+          <div class="section-head directory-head">
+            <div>
+              <span class="section-kicker">Business directory</span>
+              <h2>Search and filter</h2>
+            </div>
+          </div>
+
+          <div class="filters-panel">
+            <select id="categoryFilter">
+              <option value="all">All categories</option>
+            </select>
+            <select id="areaFilter">
+              <option value="all">All areas</option>
+            </select>
+            <select id="ratingFilter">
+              <option value="0">Any rating</option>
+              <option value="4.5">4.5+</option>
+              <option value="4.0">4.0+</option>
+              <option value="3.5">3.5+</option>
+            </select>
+            <select id="sortFilter">
+              <option value="recommended">Recommended</option>
+              <option value="popular">Most popular</option>
+              <option value="rating">Highest rated</option>
+              <option value="newest">Newest</option>
+              <option value="alphabetical">Alphabetical</option>
+            </select>
+          </div>
+
+          <div class="filter-toggle-row">
+            <label><input type="checkbox" id="openNowToggle" /> Open now</label>
+            <label><input type="checkbox" id="reelsToggle" /> Has reels</label>
+            <label><input type="checkbox" id="featuredToggle" /> Featured</label>
+            <label><input type="checkbox" id="newToggle" /> New businesses</label>
+          </div>
+
+          <div class="business-grid directory-grid" id="directoryGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand-wrap footer-brand">
+            <div class="brand-mark">B</div>
+            <div class="brand-text">
+              <span class="brand-name">BharatConnect</span>
+              <span class="brand-tag">Business discovery</span>
+            </div>
+          </div>
+          <p>Premium discovery platform built for modern Indian businesses.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li>Businesses</li>
+            <li>Categories</li>
+            <li>Reviews</li>
+            <li>Reels</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li>About</li>
+            <li>Pricing</li>
+            <li>Contact</li>
+            <li>Login</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
