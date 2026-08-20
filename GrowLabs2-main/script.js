@@ -63,7 +63,7 @@ const businesses = [
     hasReels: true,
     brand: 'ABC',
     keywords: ['fashion', 'clothing', 'women', 'men', 'designer'],
-    image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80',
+    image: './clothe.jpg',
     logo: 'A',
     phone: '+91 98765 43210',
     whatsapp: '+91 98765 43210',
@@ -199,11 +199,12 @@ const reels = [
     title: 'Fresh bites at Tea Post',
     caption: 'Experience signature flavors and evening ambience in the heart of the city.',
     business: 'Tea Post',
-    category: 'Restaurants',
+    category: 'Cafe',
     views: '21.4K',
     date: '2 days ago',
-    video: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
-    poster: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80'
+    video: './0728.mp4',
+    img: 'logo.png',
+    poster: ''
   },
   {
     title: 'Dress to impress this festive season',
@@ -212,8 +213,9 @@ const reels = [
     category: 'Clothing',
     views: '18.1K',
     date: '5 days ago',
-    video: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm',
-    poster: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80'
+    video: '',
+    img: 'logo.png',
+    poster: ''
   },
   {
     title: 'Fitness energy that keeps you moving',
@@ -222,8 +224,9 @@ const reels = [
     category: 'Gyms',
     views: '12.6K',
     date: '1 week ago',
-    video: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
-    poster: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80'
+    img: 'logo.png',
+    video: '',
+    poster: ''
   }
 ];
 
@@ -391,7 +394,9 @@ function renderReels() {
           </div>
           <div class="reel-content">
             <div class="reel-header">
-              <div class="reel-logo">${reel.business.slice(0, 1)}</div>
+              <div class="reel-logo">
+                <img src="${reel.img}"/>
+              </div>
               <div>
                 <div class="reel-title">${reel.business}</div>
                 <div class="reel-meta">${reel.category}</div>
