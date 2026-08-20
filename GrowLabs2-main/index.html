@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GrowLabs — Discover Businesses Across India</title>
+    <meta
+      name="description"
+      content="Discover the best businesses across India with premium listings, reviews, reels and community-driven discovery."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <div class="brand-wrap">
+          <div class="brand-mark">G</div>
+          <div class="brand-text">
+            <span class="brand-name">GrowLabs</span>
+            <span class="brand-tag">Business discovery</span>
+          </div>
+        </div>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="index.html" class="active">Home</a>
+          <a href="businesses.html">Businesses</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="business-profile.html">Profile</a>
+          <a href="list-your-business.html">List Your Business</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="list-your-business.html" class="primary-btn small"
+            >List Your Business</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Across India</span>
+            <h1>Discover India’s Best Businesses</h1>
+            <p>
+              Find shops, brands, restaurants, services and more — all in one
+              place.
+            </p>
+
+            <div class="search-box" id="searchBox">
+              <span class="search-icon">⌕</span>
+              <input
+                type="text"
+                id="mainSearch"
+                placeholder="Search shops, brands, categories..."
+                aria-label="Search businesses"
+              />
+              <button class="primary-btn">Search</button>
+            </div>
+
+            <div class="popular-searches" aria-label="Popular searches">
+              <span>Popular:</span>
+              <button class="tag-btn" data-search="Restaurants">
+                Restaurants
+              </button>
+              <button class="tag-btn" data-search="Clothing">Clothing</button>
+              <button class="tag-btn" data-search="Cafes">Cafes</button>
+              <button class="tag-btn" data-search="Salons">Salons</button>
+              <button class="tag-btn" data-search="Gyms">Gyms</button>
+            </div>
+
+            <div
+              class="search-suggestions"
+              id="searchSuggestions"
+              aria-live="polite"
+            ></div>
+          </div>
+
+          <div class="hero-visual" aria-label="Featured local business summary">
+            <div class="visual-card stack-one">
+              <div class="mini-card review-card">
+                <div class="mini-head">
+                  <span class="online-status"></span>
+                  <strong>Featured</strong>
+                </div>
+                <div class="mini-brand">Tea Post</div>
+                <div class="stars">★★★★★</div>
+                <small>4.9 / 210 reviews</small>
+              </div>
+              <div class="mini-card stats-card">
+                <div class="stat-row">
+                  <span>Businesses</span>
+                  <strong>2.4k+</strong>
+                </div>
+                <div class="stat-row">
+                  <span>Reels</span>
+                  <strong>780+</strong>
+                </div>
+                <div class="stat-row">
+                  <span>Verified</span>
+                  <strong>94%</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories section-spacing" id="categories">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">Popular categories</span>
+              <h2>Browse by your interest</h2>
+            </div>
+            <a href="#directory" class="text-link">View all businesses</a>
+          </div>
+          <div class="category-grid" id="categoryGrid"></div>
+        </div>
+      </section>
+
+      <section class="section-spacing featured-section" id="featured">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">Trending now</span>
+              <h2>Featured businesses</h2>
+            </div>
+            <a href="#directory" class="text-link">Explore directory</a>
+          </div>
+          <div class="business-grid" id="featuredBusinesses"></div>
+        </div>
+      </section>
+
+      <section class="section-spacing area-section" id="about">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">Explore by area</span>
+              <h2>Discover local hotspots</h2>
+            </div>
+          </div>
+          <div class="area-grid" id="areaGrid"></div>
+        </div>
+      </section>
+
+      <section class="section-spacing reels-section" id="reels">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">Social discovery</span>
+              <h2>Latest promotional reels</h2>
+            </div>
+            <a href="#directory" class="text-link">See all</a>
+          </div>
+          <div class="reel-grid" id="reelsGrid"></div>
+        </div>
+      </section>
+
+      <section class="section-spacing directory-section" id="directory">
+        <div class="container">
+          <div class="section-head directory-head">
+            <div>
+              <span class="section-kicker">Business directory</span>
+              <h2>Search and filter your next discovery</h2>
+            </div>
+          </div>
+
+          <div class="filters-panel">
+            <select id="categoryFilter">
+              <option value="all">All categories</option>
+            </select>
+            <select id="areaFilter">
+              <option value="all">All areas</option>
+            </select>
+            <select id="ratingFilter">
+              <option value="0">Any rating</option>
+              <option value="4.5">4.5+</option>
+              <option value="4.0">4.0+</option>
+              <option value="3.5">3.5+</option>
+            </select>
+            <select id="sortFilter">
+              <option value="recommended">Recommended</option>
+              <option value="popular">Most popular</option>
+              <option value="rating">Highest rated</option>
+              <option value="newest">Newest</option>
+              <option value="alphabetical">Alphabetical</option>
+            </select>
+          </div>
+
+          <div class="filter-toggle-row">
+            <label><input type="checkbox" id="openNowToggle" /> Open now</label>
+            <label><input type="checkbox" id="reelsToggle" /> Has reels</label>
+            <label
+              ><input type="checkbox" id="featuredToggle" /> Featured</label
+            >
+            <label
+              ><input type="checkbox" id="newToggle" /> New businesses</label
+            >
+          </div>
+
+          <div class="business-grid directory-grid" id="directoryGrid"></div>
+        </div>
+      </section>
+
+      <section class="section-spacing pricing-section">
+        <div class="container">
+          <div class="section-head center-head">
+            <div>
+              <span class="section-kicker">Plans & pricing</span>
+              <h2>Built for businesses that want visibility</h2>
+            </div>
+          </div>
+          <div class="pricing-grid" id="pricingGrid"></div>
+        </div>
+      </section>
+
+      <section class="section-spacing cta-section" id="contact">
+        <div class="container cta-shell">
+          <div>
+            <span class="section-kicker">Grow locally</span>
+            <h2>Want More Customers to Discover Your Business?</h2>
+          </div>
+          <div class="cta-actions">
+            <button class="primary-btn">List Your Business</button>
+            <button class="secondary-btn">View Plans</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand-wrap footer-brand">
+            <div class="brand-mark">B</div>
+            <div class="brand-text">
+              <span class="brand-name">GrowLabs</span>
+              <span class="brand-tag">Business discovery</span>
+            </div>
+          </div>
+          <p>Premium business discovery platform for India.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li>Businesses</li>
+            <li>Categories</li>
+            <li>Reels</li>
+            <li>Featured</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li>About</li>
+            <li>Pricing</li>
+            <li>Contact</li>
+            <li>Business Login</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal hidden"
+      id="businessModal"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-card">
+        <button class="modal-close" aria-label="Close details">×</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
